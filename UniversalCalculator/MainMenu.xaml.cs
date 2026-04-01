@@ -50,7 +50,7 @@ namespace Calculator
 
 		private void currencyButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			Frame.Navigate(typeof(CurrencyCalculator));
 		}
 
 		private void exitButton_Click(object sender, RoutedEventArgs e)
