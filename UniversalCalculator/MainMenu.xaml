@@ -1,0 +1,71 @@
+﻿<Page x:Class="Calculator.MainMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:control="using:Calculator.Controls" Loaded="pageLoaded" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+	<!-- resources -->
+	<Page.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Resources/Resources.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Page.Resources>
+
+	<!-- TODO -->
+	<Grid Style="{StaticResource GridStyle}" Margin="4,4,4,4">
+		
+		<!-- definitions -->
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!-- Abacus Image -->
+		<Image x:Name="abacusImage" Source="Assets/abacus.jpg"
+			   Grid.Row="0" Grid.Column="0"
+			   HorizontalAlignment="Center"
+			   MinHeight="100" MinWidth="100"
+			   Margin="0,0,0,0" Width="400" />
+
+		<!-- Main menu text label -->
+		<TextBlock x:FieldModifier="public" x:Name="applicationLabel"
+				   Style="{StaticResource HeadingTextBlockStyle}"
+				   HorizontalAlignment="Center"
+				   Grid.Row="1" Grid.Column="0"
+				   Text="Universal Calculator" />
+
+		<!-- Main menu buttons-->		
+		<Button x:Name="mathButton"
+				Style="{StaticResource MenuButtonStyle}"
+				Grid.Row="2" Grid.Column="0"
+				Click="mathButton_Click">
+			Math Calculator
+		</Button>
+
+		<Button x:Name="mortgageButton"
+				Style="{StaticResource MenuButtonStyle}"
+				Grid.Row="3" Grid.Column="0"
+				Click="mortgageButton_Click">
+			Mortgage Calculator
+		</Button>
+
+		<Button x:Name="currencyButton"
+				Style="{StaticResource MenuButtonStyle}"
+				Grid.Row="4" Grid.Column="0"
+				Click="currencyButton_Click">
+			Currency Calculator
+		</Button>
+
+		<Button x:Name="exitButton"
+				Style="{StaticResource MenuButtonStyle}"
+				Grid.Row="5" Grid.Column="0"
+				Click="exitButton_Click">
+			Exit
+		</Button>
+		
+	</Grid>
+</Page>

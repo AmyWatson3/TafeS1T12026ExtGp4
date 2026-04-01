@@ -22,15 +22,32 @@
 	</Style>
 
 	<!-- ButtonBlueStyle -->
-	<Style x:Key="ButtonBlueStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+	<Style x:Key="ButtonBlueStyle" TargetType="Button"
+		BasedOn="{StaticResource ButtonStyle}">
 		<Setter Property="Background" Value="LightYellow" />
 	</Style>
 
+	<!-- Menu button style -->
+	<Style x:Key="MenuButtonStyle" TargetType="Button"
+		BasedOn="{StaticResource ButtonStyle}">
+		<Setter Property="Background" Value="#FFAAADB0" />
+		<Setter Property="IsTabStop" Value="True" />
+		<Setter Property="Margin" Value="25,0,25,0" />
+	</Style>
+
+	<!-- HeadingTextBlockStyle -->
+	<Style x:Key="HeadingTextBlockStyle" TargetType="TextBlock">
+		<Setter Property="FontFamily" Value="Arial" />
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontSize" Value="36" />
+	</Style>
+	
 	<!-- BigTextBlockStyle -->
 	<Style x:Key="BigTextBlockStyle" TargetType="TextBlock">
 		<Setter Property="FontFamily" Value="Arial" />
-		<Setter Property="FontSize" Value="64" />
+		<Setter Property="FontSize" Value="32" />
 	</Style>
+	
 	<!-- SmallTextBlockStyle -->
 	<Style x:Key="SmallTextBlockStyle" TargetType="TextBlock">
 		<Setter Property="FontFamily" Value="Arial" />
@@ -38,9 +55,11 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="Height" Value="37" />
 	</Style>
+	
 	<!-- FlyoutTextBlockStyle -->
 	<Style x:Key="FlyoutTextBlockStyle" TargetType="TextBlock">
 		<Setter Property="FontFamily" Value="Arial" />
 		<Setter Property="FontSize" Value="14" />
 	</Style>
+	
 </ResourceDictionary>
