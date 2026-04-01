@@ -9,15 +9,15 @@
 	</Page.Resources>
 
 	<!-- TODO -->
-	<Grid Style="{StaticResource GridStyle}" Margin="4,4,4,4">
+	<Grid Style="{StaticResource GridStyle}" Margin="4,32,4,4">
 		
 		<!-- definitions -->
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="auto" />
-			<RowDefinition Height="auto" />
+			<RowDefinition Height="4*" />
+			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
@@ -29,7 +29,7 @@
 			   Grid.Row="0" Grid.Column="0"
 			   HorizontalAlignment="Center"
 			   MinHeight="100" MinWidth="100"
-			   Margin="0,0,0,0" Width="400" />
+			   Margin="10,0,10,0" />
 
 		<!-- Main menu text label -->
 		<TextBlock x:FieldModifier="public" x:Name="applicationLabel"
