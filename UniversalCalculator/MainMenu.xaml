@@ -22,6 +22,7 @@
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 
 		<!-- Abacus Image -->
@@ -59,10 +60,17 @@
 				Click="currencyButton_Click">
 			Currency Calculator
 		</Button>
+		
+		<Button x:Name="tripButton"
+		        Style="{StaticResource MenuButtonStyle}"
+		        Grid.Row="5" Grid.Column="0"
+		        Click="tripButton_Click">
+			Trip Calculator
+		</Button>
 
 		<Button x:Name="exitButton"
 				Style="{StaticResource MenuButtonStyle}"
-				Grid.Row="5" Grid.Column="0"
+				Grid.Row="6" Grid.Column="0"
 				Click="exitButton_Click">
 			Exit
 		</Button>

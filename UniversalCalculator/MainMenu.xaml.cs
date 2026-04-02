@@ -1,6 +1,8 @@
-﻿using Windows.ApplicationModel.Core;
+﻿using System;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -52,6 +54,12 @@ namespace Calculator
 		private void currencyButton_Click(object sender, RoutedEventArgs e)
 		{
 			Frame.Navigate(typeof(CurrencyCalculator));
+		}
+		
+		private async void tripButton_Click(object sender, RoutedEventArgs e)
+		{
+			var messageDialog = new MessageDialog("Trip calculator C# code will be developed later.");
+			await messageDialog.ShowAsync();
 		}
 
 		private void exitButton_Click(object sender, RoutedEventArgs e)
