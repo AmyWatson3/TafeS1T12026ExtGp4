@@ -40,7 +40,7 @@ namespace Calculator
 
 		private void mathButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			Frame.Navigate(typeof(MainPage));
 		}
 
 		// Open the mortgage calculator page
@@ -56,7 +56,7 @@ namespace Calculator
 
 		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			Application.Current.Exit();
 		}
 
 	}
