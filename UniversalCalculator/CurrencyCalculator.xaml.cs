@@ -30,34 +30,34 @@ namespace Calculator
 			this.InitializeComponent();
 
 			var usaRates = new Dictionary<CurrencyType, double>();
-			usaRates.Add(CurrencyType.USA, 1.0);
 			usaRates.Add(CurrencyType.EUR, 0.85189982);
 			usaRates.Add(CurrencyType.GBP, 0.72872436);
 			usaRates.Add(CurrencyType.INR, 74.257327);
+			usaRates.Add(CurrencyType.USA, 1.0);  
 			var usa = new Currency("USD - US Dollar", "US Dollars", CurrencyType.USA, usaRates, "Assets/USA1.PNG");
 			currencies.Add(usa);
 
 			var eurRates = new Dictionary<CurrencyType, double>();
-			usaRates.Add(CurrencyType.EUR, 1.0);
 			eurRates.Add(CurrencyType.USA, 1.1739732);
 			eurRates.Add(CurrencyType.GBP, 0.8556672);
 			eurRates.Add(CurrencyType.INR, 87.00755);
+			eurRates.Add(CurrencyType.EUR, 1.0);
 			var eur = new Currency("EUR - Euro", "Euros", CurrencyType.EUR, eurRates, "Assets/EUR1.PNG");
 			currencies.Add(eur);
 
 			var gbpRates = new Dictionary<CurrencyType, double>();
-			usaRates.Add(CurrencyType.GBP, 1.0);
 			gbpRates.Add(CurrencyType.USA, 1.371907);
 			gbpRates.Add(CurrencyType.EUR, 1.1686692);
 			gbpRates.Add(CurrencyType.INR, 101.68635);
+			gbpRates.Add(CurrencyType.GBP, 1.0);
 			var gbp = new Currency("GBP - British Pound", "British Pounds", CurrencyType.GBP, gbpRates, "Assets/UK1.PNG");
 			currencies.Add(gbp);
 
 			var inrRates = new Dictionary<CurrencyType, double>();
-			usaRates.Add(CurrencyType.INR, 1.0);
 			inrRates.Add(CurrencyType.USA, 0.011492628);
 			inrRates.Add(CurrencyType.EUR, 0.013492774);
 			inrRates.Add(CurrencyType.GBP, 0.0098339397);
+			inrRates.Add(CurrencyType.INR, 1.0);
 			var inr = new Currency("INR - Indian Rupee", "Indian Rupees", CurrencyType.INR, inrRates, "Assets/INDIA.PNG");
 			currencies.Add(inr);
 		}
