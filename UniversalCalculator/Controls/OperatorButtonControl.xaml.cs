@@ -13,7 +13,7 @@ namespace Calculator.Controls
 		}
 
 		public static readonly DependencyProperty ValueProperty =
-			DependencyProperty.Register("Value", typeof(string), typeof(NumberButtonControl), null);
+			DependencyProperty.Register("Value", typeof(string), typeof(OperatorButtonControl), null);
 
 		// default function
 		public OperatorButtonControl()

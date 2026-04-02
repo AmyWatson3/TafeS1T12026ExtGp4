@@ -1,0 +1,116 @@
+﻿<Page x:Class="Calculator.MortgageCalculator" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:control="using:Calculator.Controls" Loaded="pageLoaded" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+	<!-- resources -->
+	<Page.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Resources/Resources.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Page.Resources>
+
+	<!-- Mortgage Calculator inputs -->
+	<Grid Style="{StaticResource GridStyle}" Margin="4,32,4,32">
+
+		<!-- definitions -->
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="2*" MinWidth="250" />
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<!-- Page text label -->
+		<TextBlock x:FieldModifier="public" 
+				   Style="{StaticResource HeadingTextBlockStyle}"
+				   HorizontalAlignment="Center"
+				   Grid.Row="0" Grid.Column="0"
+				   Grid.ColumnSpan="2"
+				   Text="Mortgage Calculator" />
+
+		<!-- Inputs -->
+		<TextBlock Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="1" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Principle borrowed: $" />
+		<TextBox x:Name="borrowedTextBox"
+				 Style="{StaticResource NumericTextBoxStyle}"
+				 Grid.Row="1" Grid.Column="1" />
+
+		<TextBlock Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="2" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Years:" />
+		<TextBox x:Name="yearsTextBox"
+				 Style="{StaticResource NumericTextBoxStyle}"
+				 Grid.Row="2" Grid.Column="1"
+				 Text="0"/>
+
+		<TextBlock Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="3" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Months:" />
+		<TextBox x:Name="monthsTextBox"
+				 Style="{StaticResource NumericTextBoxStyle}"
+				 Grid.Row="3" Grid.Column="1"
+				 Text="0"/>
+
+		<TextBlock Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="4" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Annual Interest Rate: %" />
+		<TextBox x:Name="annualInterestRateTextBox"
+				 Style="{StaticResource NumericTextBoxStyle}"
+				 Grid.Row="4" Grid.Column="1" />
+
+		<!-- Outputs -->
+		<TextBlock x:Name="monthlyInterestRateLabel"
+				   Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="5" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Monthly Interest Rate: %" >
+			
+		</TextBlock>
+		<TextBox x:Name="monthlyInterestRateTextBox"
+				 Style="{StaticResource ReadOnlyNumericTextBoxStyle}"
+				 Grid.Row="5" Grid.Column="1" />
+
+		<TextBlock Style="{StaticResource LabelBlockStyle}"
+				   Grid.Row="6" Grid.Column="0"
+				   HorizontalTextAlignment="Right"
+				   Text="Monthly Repayment: $" />
+		<TextBox x:Name="monthlyRepaymentTextBox"
+				 Style="{StaticResource ReadOnlyNumericTextBoxStyle}"
+				 Grid.Row="6" Grid.Column="1" />
+	
+
+		<!-- Button panel -->
+		<StackPanel x:Name="buttonPanel" Orientation="Horizontal"
+					Grid.Row="7" Grid.Column="0"
+					Grid.ColumnSpan="2"
+					HorizontalAlignment="Right"
+					Spacing="10">
+			<FlyoutBase.AttachedFlyout>
+				<Flyout FlyoutPresenterStyle="{StaticResource FlyoutStyle}">
+					<TextBlock x:FieldModifier="public" x:Name="errorDisplay"
+				   Style="{StaticResource ErrorFlyoutTextBlockStyle}" />
+				</Flyout>
+			</FlyoutBase.AttachedFlyout>
+
+			<Button x:Name="calculateButton"
+				Style="{StaticResource PageButtonStyle}"
+				Click="calculateButton_Click" Content="Calculate"/>
+
+			<Button x:Name="exitButton"
+					Style="{StaticResource PageButtonStyle}"
+					Click="exitButton_Click" Content="Exit"/>
+		</StackPanel>
+	</Grid>
+</Page>

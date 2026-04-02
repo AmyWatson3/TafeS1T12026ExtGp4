@@ -26,7 +26,7 @@ namespace Calculator
 		{
 
 			// window minimum size
-			ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(256, 650));
+			ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(350, 600));
 
 			// enable title bar full customiztion
 			CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
@@ -43,9 +43,10 @@ namespace Calculator
 
 		}
 
+		// Open the mortgage calculator page
 		private void mortgageButton_Click(object sender, RoutedEventArgs e)
 		{
-
+			Frame.Navigate(typeof(MortgageCalculator));
 		}
 
 		private void currencyButton_Click(object sender, RoutedEventArgs e)
